@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Thank You - PhysioCare Clinic">
+    <meta name="keywords" content="physiotherapy, clinic, thank you">
+    <meta name="author" content="PhysioCare Clinic">
+    <title>Thank You - PhysioCare Clinic</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+            text-align: center;
+            padding: 50px;
+        }
+        h1 {
+            color: #D32F2F;
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+        p {
+            font-size: 1.2rem;
+            color: #333;
+            margin-bottom: 15px;
+        }
+        a {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #D32F2F;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 1rem;
+            transition: background-color 0.3s;
+        }
+        a:hover {
+            background-color: #B71C1C;
+        }
+        #countdown {
+            font-size: 1rem;
+            color: #666;
+            margin-top: 20px;
+        }
+        .visiting-hours {
+            font-size: 1rem;
+            color: #555;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Thank You!</h1>
+    <p>Your appointment has been successfully booked. We will contact you shortly to confirm the details.</p>
+    <p class="visiting-hours">Our clinic visiting hours are from <strong>9 AM to 5 PM</strong>.</p>
+    <a href="index.html">Return to Home</a>
+    <p id="countdown">Redirecting to homepage in <span id="timer">10</span> seconds...</p>
+
+    <script>
+        // Countdown timer for automatic redirect
+        let countdown = 10; // 10 seconds
+        const timerElement = document.getElementById('timer');
+
+        const countdownInterval = setInterval(() => {
+            countdown--;
+            timerElement.textContent = countdown;
+
+            if (countdown === 0) {
+                clearInterval(countdownInterval);
+                window.location.href = 'index.html'; // Redirect to homepage
+            }
+        }, 1000);
+    </script>
+</body>
+</html>
